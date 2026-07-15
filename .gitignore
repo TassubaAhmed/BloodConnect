@@ -1,5 +1,6 @@
-# Windows
-echo node_modules/ > .gitignore
-echo .DS_Store >> .gitignore
-echo .vscode/ >> .gitignore
-echo *.log >> .gitignore
+node_modules/
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env
