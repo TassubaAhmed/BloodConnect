@@ -1,372 +1,53 @@
-<<<<<<< HEAD
 # 🩸 BloodConnect — Blood Donor Matching Platform
 
-A comprehensive full-stack platform connecting blood donors with recipients for emergency blood requests, featuring smart matching, real-time tracking, and administrative dashboards.
+A full-stack MERN platform connecting blood donors with recipients through smart matching, real-time emergency requests, and comprehensive health management.
 
-![BloodConnect](https://img.shields.io/badge/Status-Active-success)
-![Tech](https://img.shields.io/badge/Stack-MERN-blue)
-![Team](https://img.shields.io/badge/Team-Group%202-red)
+![Stack](https://img.shields.io/badge/Stack-MERN-blue) ![Team](https://img.shields.io/badge/Team-Group%202-red) ![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---
 
 ## 👥 Team — Group 2
 
-| Student ID | Name | Role |
-|-----------|------|------|
+| ID | Name | Module |
+|----|------|--------|
 | **22221120** | Tassuba Ahmed | Donor Management & Search |
 | **24341065** | Jareen Tasnim Bushra | Blood Requests & Matching |
 | **23301666** | Tasnuba Tabassum Ahona | Responses, Admin & Analytics |
 
 ---
 
-## 📋 Feature Distribution
+## 🎯 Feature Ownership
 
-### 👤 Tassuba Ahmed (22221120) — Donor Management
-1. Donor Profile Management
-2. Health Information Management
-3. Donor Availability Status
-4. Donor Search & Filtering
-5. Emergency Contact Information
+### 🔴 Tassuba Ahmed (5 features)
+Donor Profile · Health Info · Availability Status · Donor Search & Filtering · Emergency Contact
 
-**Files:**
-- `backend/models/DonorProfile.js`
-- `backend/models/User.js`
-- `backend/routes/donors.js`
-- `frontend/src/pages/DonorProfile.js`
-- `frontend/src/pages/DonorSearch.js`
-- `frontend/src/components/BloodGroupBadge.js`
+### 🔵 Jareen Tasnim Bushra (5 features)
+Emergency Requests · Smart Matching · Blood Compatibility · Requests Dashboard · Request Filtering
 
----
-
-### 👤 Jareen Tasnim Bushra (24341065) — Blood Requests
-1. Emergency Blood Request Submission
-2. Smart Donor Matching
-3. Blood Compatibility Suggestions
-4. Active Blood Request Dashboard
-5. Blood Request Search & Filtering
-
-**Files:**
-- `backend/models/BloodRequest.js`
-- `backend/routes/bloodRequests.js`
-- `backend/config/db.js`
-- `frontend/src/pages/BloodRequests.js`
-- `frontend/src/pages/CreateBloodRequest.js`
-- `frontend/src/pages/BloodRequestDetail.js`
-
----
-
-### 👤 Tasnuba Tabassum Ahona (23301666) — Responses & Admin
-1. Donate Response System
-2. Request Status Tracking
-3. Donation History
-4. Admin Dashboard
-5. Reports & Analytics
-
-**Files:**
-- `backend/models/DonationResponse.js`
-- `backend/routes/admin.js`
-- `backend/middleware/auth.js`
-- `backend/seeds/seed.js`
-- `frontend/src/pages/Dashboard.js`
-- `frontend/src/pages/DonationHistory.js`
-- `frontend/src/pages/AdminDashboard.js`
-- `frontend/src/components/StatusBadge.js`
-
----
-
-## 🚀 Features (15 Core + 3 Auth)
-
-### Core Features
-1. ✅ Donor Profile Management
-2. ✅ Health Information Management
-3. ✅ Donor Availability Status
-4. ✅ Emergency Blood Request Submission
-5. ✅ Smart Donor Matching
-6. ✅ Blood Compatibility Suggestions
-7. ✅ Active Blood Request Dashboard
-8. ✅ Donor Search & Filtering
-9. ✅ Blood Request Search & Filtering
-10. ✅ Donate Response System
-11. ✅ Request Status Tracking
-12. ✅ Donation History
-13. ✅ Emergency Contact Information
-14. ✅ Admin Dashboard
-15. ✅ Reports & Analytics
-
-### Authentication (Shared)
-- Registration (Donor/Recipient/Admin)
-- Secure Login with JWT
-- Session Management
+### 🟠 Tasnuba Tabassum Ahona (5 features)
+Donate Response · Status Tracking · Donation History · Admin Dashboard · Analytics
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend
-- **React 18** — UI library
-- **React Router v6** — Client-side routing
-- **Axios** — HTTP client
-- **Lucide React** — Icons
-- **CSS3** — Custom styling (no framework)
-
-### Backend
-- **Node.js + Express** — REST API server
-- **MongoDB + Mongoose** — Database & ODM
-- **JWT** — Authentication tokens
-- **bcryptjs** — Password hashing
-- **CORS** — Cross-origin support
+**Frontend:** React 18, React Router v6, Axios, Lucide Icons, CSS3  
+**Backend:** Node.js, Express, MongoDB, Mongoose, JWT, bcryptjs
 
 ---
 
-## 📦 Project Structure
+## 🚀 Quick Start
 
-\`\`\`
-BloodConnect/
-├── backend/
-│   ├── models/
-│   │   ├── DonorProfile.js       ← Tassuba
-│   │   ├── User.js               ← Tassuba
-│   │   ├── BloodRequest.js       ← Jareen
-│   │   └── DonationResponse.js   ← Tasnuba
-│   ├── routes/
-│   │   ├── donors.js             ← Tassuba
-│   │   ├── bloodRequests.js      ← Jareen
-│   │   └── admin.js              ← Tasnuba
-│   ├── middleware/
-│   │   └── auth.js               ← Tasnuba
-│   ├── config/
-│   │   └── db.js                 ← Jareen
-│   └── seeds/
-│       └── seed.js               ← Tasnuba
-│
-└── frontend/
-    └── src/
-        ├── pages/
-        │   ├── DonorProfile.js       ← Tassuba
-        │   ├── DonorSearch.js        ← Tassuba
-        │   ├── BloodRequests.js      ← Jareen
-        │   ├── CreateBloodRequest.js ← Jareen
-        │   ├── BloodRequestDetail.js ← Jareen
-        │   ├── Dashboard.js          ← Tasnuba
-        │   ├── DonationHistory.js    ← Tasnuba
-        │   └── AdminDashboard.js     ← Tasnuba
-        └── components/
-            ├── BloodGroupBadge.js    ← Tassuba
-            └── StatusBadge.js        ← Tasnuba
-\`\`\`
-
----
-
-## 🔑 Blood Compatibility Chart
-
-| Recipient | Compatible Donors |
-|-----------|-------------------|
-| **A+** | A+, A-, O+, O- |
-| **A-** | A-, O- |
-| **B+** | B+, B-, O+, O- |
-| **B-** | B-, O- |
-| **AB+** | Universal (All 8 groups) |
-| **AB-** | A-, B-, AB-, O- |
-| **O+** | O+, O- |
-| **O-** | O- only |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 16+
-- MongoDB (local or Atlas)
-- npm or yarn
-
-### Installation
-
-\`\`\`bash
-# Clone the repository
+```bash
+# Clone
 git clone https://github.com/TassubaAhmed/BloodConnect.git
 cd BloodConnect
 
-# Install backend dependencies
-cd backend
-npm install
+# Backend
+cd backend && npm install
+npm run seed        # Create test accounts
+npm run dev         # Start on port 5000
 
-# Install frontend dependencies
-cd ../frontend
-npm install
-\`\`\`
-
-### Environment Setup
-
-Create `backend/.env`:
-\`\`\`env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/blood_donor_platform
-\`\`\`
-
-### Run the Application
-
-\`\`\`bash
-# Terminal 1 — Seed the database
-cd backend
-npm run seed
-
-# Terminal 2 — Start backend
-npm run dev
-
-# Terminal 3 — Start frontend
-cd frontend
-npm start
-\`\`\`
-
-Visit **http://localhost:3000**
-
----
-
-## 🧪 Test Accounts
-
-Password for all accounts: `password123`
-
-| Role | Email |
-|------|-------|
-| 🔴 Admin | admin@gmail.com |
-| 🟢 Donor | donor@gmail.com |
-| 🔵 Recipient | recipient@gmail.com |
-
----
-
-## 📸 Screenshots
-
-### Homepage
-Beautiful landing page with hero section, features, and team info.
-
-### Dashboard
-Role-based dashboard with real-time stats.
-
-### Blood Request
-Emergency request form with smart matching.
-
-### Admin Panel
-Complete platform analytics and user management.
-
----
-
-## 🎨 Design Highlights
-
-- **Minimalistic & Professional UI**
-- **Red gradient theme** (#dc2626 → #b91c1c)
-- **Smart matching algorithm**
-- **Fully responsive** (mobile-first)
-- **Accessibility-friendly**
-- **Real-time notifications**
-
----
-
-## 📝 API Endpoints Highlight
-
-### Donor Management (Tassuba)
-- `POST   /api/donors/profile` — Create/update profile
-- `GET    /api/donors` — Search donors with filters
-- `PATCH  /api/donors/availability` — Update availability
-
-### Blood Requests (Jareen)
-- `POST   /api/blood-requests` — Create request (auto-match)
-- `GET    /api/blood-requests` — Filter by group/urgency
-- `GET    /api/blood-requests/:id` — Get single with compatibility
-
-### Responses & Admin (Tasnuba)
-- `POST   /api/blood-requests/:id/respond` — Volunteer to donate
-- `GET    /api/admin/stats` — Platform analytics
-- `GET    /api/admin/users` — Manage users
-
----
-
-## 🏆 Project Highlights
-
-- ✨ **15 core features** implemented
-- 🎯 **3-tier user roles** (Donor, Recipient, Admin)
-- 🩸 **Smart blood matching** with compatibility logic
-- 📊 **Real-time analytics** dashboard
-- 🔒 **JWT-based authentication**
-- 📱 **Fully responsive** design
-
----
-
-## 👨‍💻 Contributing
-
-This is a group academic project. Team members:
-- Tassuba Ahmed
-- Jareen Tasnim Bushra
-- Tasnuba Tabassum Ahona
-
----
-
-## 📄 License
-
-Academic Project — BRAC University · 2024
-
----
-
-**Made with ❤️ by Group 2 — BloodConnect Team**
-=======
-# BloodConnect — UI Components
-
-Frontend UI files by **Tassuba Ahmed** for the BloodConnect Blood Donor Matching Platform.
-
-## 📁 Files Included
-
-### Pages
-- `frontend/src/pages/Home.js` — Landing/Homepage
-- `frontend/src/pages/Login.js` — User login page
-- `frontend/src/pages/Register.js` — User registration page
-
-### Styles
-- `frontend/src/styles/home.css` — Homepage styles
-- `frontend/src/styles/auth.css` — Login/Register split-screen styles
-
-## 🎨 Features
-
-### Homepage (`Home.js`)
-- Sticky navbar with scroll effect
-- Hero section with animated floating cards
-- 6 feature cards with gradient icons
-- 3-step process flow
-- Role selection cards (Donor/Recipient/Admin)
-- Impact statistics section
-- Team section (Group 2)
-- CTA section
-- Dark footer
-
-### Login (`Login.js`)
-- Split-screen design (branding + form)
-- Test account quick-fill buttons
-- Show/hide password toggle
-- Animated blob backgrounds
-- Testimonial card
-- Fully responsive
-
-### Register (`Register.js`)
-- Split-screen design
-- Visual role picker (Donor/Recipient/Admin)
-- Live password strength meter (4 levels)
-- Real-time password match indicator
-- 3-step benefit cards
-- Terms & Privacy notice
-
-## 🛠 Tech Stack
-- React 18
-- React Router v6
-- Lucide React (icons)
-- CSS3 (custom, no framework)
-
-## 👤 Author
-**Tassuba Ahmed** — Student ID: 22221120  
-Group 2 — BloodConnect Project
-
-## 🎯 Design Highlights
-- Minimalistic & professional UI
-- Red gradient theme (`#dc2626` → `#b91c1c`)
-- Glass-morphism effects
-- Smooth animations & hover states
-- Mobile-first responsive design
-- Accessibility-friendly forms
->>>>>>> 310f4cee1f55ece75a4d920cbbdbe998ed9119a5
+# Frontend (new terminal)
+cd frontend && npm install
+npm start           # Start on port 3000
